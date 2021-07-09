@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.LoginController">
+   <children>
+      <Pane fx:id="bg_login" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to top, #a8ff78, #78ffd6); -fx-background-radius: 100 0 0 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView layoutX="102.0" layoutY="112.0">
+               <image>
+                  <Image url="@image/intertelcom_logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="37.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INTER-TELCOM" textAlignment="CENTER" wrappingWidth="227.0">
+               <font>
+                  <Font name="Arial Narrow Bold" size="36.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff6700" />
+                        <Stop color="#f9ff4d" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Label layoutX="170.0" layoutY="476.0" text="version : ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVersion" layoutX="229.0" layoutY="476.0" prefHeight="20.0" prefWidth="70.0" text="1.22.235">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #fffafb; -fx-background-radius: 0 100 100 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="127.0" layoutY="178.0">
+               <image>
+                  <Image url="@image/password.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="127.0" layoutY="93.0">
+               <image>
+                  <Image url="@image/username.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="182.0" layoutY="103.0" text="Username">
+               <font>
+                  <Font name="Agency FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="188.0" text="Password">
+               <font>
+                  <Font name="Agency FB" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" alignment="CENTER" layoutX="101.0" layoutY="147.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter usersane" style="-fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-background-color: transparent;">
+               <tooltip>
+                  <Tooltip text="Enter your Username">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="100.0" layoutY="226.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Password" style="-fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-background-color: transparent;">
+               <tooltip>
+                  <Tooltip text="Enter your Password">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </PasswordField>
+            <Pane layoutX="103.0" layoutY="290.0" onMouseClicked="#login" style="-fx-background-color: #F5A743; -fx-background-radius: 50 50 50 50;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="195.0" text="Log In" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+            </Pane>
+            <Pane layoutX="103.0" layoutY="351.0" onMouseClicked="#cancel" style="-fx-background-color: #D9514B; -fx-background-radius: 50 50 50 50;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="195.0" text="Reset" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+            </Pane>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="326.0" layoutY="29.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/exit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="285.0" layoutY="29.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@image/reduce.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+            </ImageView>
+            <Label layoutX="100.0" layoutY="464.0" text="Powered by " textFill="#656565">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView cacheHint="QUALITY" fitHeight="28.0" fitWidth="136.0" layoutX="166.0" layoutY="458.0">
+               <image>
+                  <Image url="@image/TWOPERFECT.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

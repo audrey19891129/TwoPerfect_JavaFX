@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="AP_Index" prefHeight="850.0" prefWidth="1400.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.IndexController">
+   <children>
+      <Pane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imgBackground" fitHeight="850.0" fitWidth="1400.0" pickOnBounds="true">
+               <image>
+                  <Image url="https://img.freepik.com/vetores-gratis/fundo-no-conceito-de-tecnologia_49459-482.jpg?size=1920&amp;ext=jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <BorderPane fx:id="front_main_index" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="972.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane fx:id="root" prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #004e6466;" BorderPane.alignment="CENTER">
+               <children>
+                  <Circle fill="#d90429" layoutX="576.0" layoutY="14.0" onMouseClicked="#exit" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="15.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                  </Circle>
+                  <Circle fill="#04d956" layoutX="910.0" layoutY="14.0" onMouseClicked="#fullscreen" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="50.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                  </Circle>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="35.0" prefWidth="800.0" style="-fx-background-color: #343a4066;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="590.0" layoutY="9.0" text="Powered by " textFill="WHITE" AnchorPane.rightAnchor="144.0" />
+                  <ImageView fitHeight="35.0" fitWidth="150.0" AnchorPane.rightAnchor="0.0">
+                     <image>
+                        <Image url="@image/TWOPERFECT.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="785.0" prefWidth="250.0" style="-fx-background-color: #004e6466;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/intertelcom_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="INTER-TELCOM">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ff6700" />
+                              <Stop color="#f9ff4d" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Label fx:id="lblEmployee" text="Welcome JeanMartin Letourneau" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSearchClient" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#searchClientView" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Search a Client" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0">
+                           <image>
+                              <Image url="@image/client_dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Search a Client by Email or by Phone Number">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_SearchTech" mnemonicParsing="false" onAction="#searchTechnicianFields" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Search a Tech." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0">
+                           <image>
+                              <Image url="@image/tech_dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Search a Technician">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                     </Button>
+                  <Button fx:id="btn_Tickets" mnemonicParsing="false" onAction="#searchTickets" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Tickets" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0">
+                           <image>
+                               <Image url="@image/tickets_dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Find a Ticket">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                     </Button>
+                  <Button fx:id="btnLive" mnemonicParsing="false" onAction="#liveDisplay" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Live" textFill="WHITE" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0">
+                           <image>
+                              <Image url="@image/live_dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Live">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="RIGHT" graphicTextGap="25.0" mnemonicParsing="false" onMouseClicked="#signout" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #ee6c4d66;" text="Log out" textFill="#eb4747">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" nodeOrientation="RIGHT_TO_LEFT">
+                           <image>
+                              <Image url="@image/logout_dashboard.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D minX="150.0" minY="140.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Log out" />
+                     </tooltip>
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="pressed" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets top="150.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="615.0" prefWidth="862.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane fx:id="SearchClientView" layoutY="-1.0" prefHeight="622.0" prefWidth="862.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <HBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="690.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ComboBox fx:id="cmbSearchBy" prefHeight="25.0" prefWidth="140.0" style="-fx-font-size: 16px;" translateX="80.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Select &quot;Email&quot; or &quot;Phone&quot;">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </ComboBox>
+                              <TextField fx:id="txtEmail" focusTraversable="false" prefHeight="40.0" prefWidth="300.0" promptText="example@gmail.com" translateX="125.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Enter the Client Email@">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtPhone1" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" promptText="###" translateX="-175.0" visible="false">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Enter the first 3-digits of the Phone Number" />
+                                 </tooltip>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                              <TextField fx:id="txtPhone2" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" promptText="###" translateX="-175.0" visible="false">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Enter the 3-digits that comes after the Area Code " />
+                                 </tooltip>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                              <TextField fx:id="txtPhone3" alignment="CENTER" prefHeight="25.0" prefWidth="90.0" promptText="####" translateX="-175.0" visible="false">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Enter the last 4-digits of the Phone Number" />
+                                 </tooltip>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                              <Button minHeight="25.0" mnemonicParsing="false" onAction="#searchClient" prefWidth="200.0" style="-fx-background-color: #073b4c;" text="Search" textFill="WHITE" translateX="-110.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Button Search the Client">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="hover" />
+                                    <String fx:value="pressed" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                     <center>
+                        <TabPane fx:id="TP_Client" side="LEFT" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                          <tabs>
+                            <Tab fx:id="tabInfos" style="-fx-background-color: transparent; -fx-font-size: 20px; -fx-font-family: Arial Black;" text="CLIENT INFORMATIONS">
+                              <content>
+                                <AnchorPane fx:id="sectionInfos" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <SplitPane fx:id="SP_ClientInfos" dividerPositions="0.681184668989547" layoutX="-1.0" layoutY="-2.0" prefHeight="220.0" prefWidth="1150.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="288.0" prefWidth="862.0" style="-fx-border-color: white; -fx-border-width: 5px; -fx-background-color: #90e0ef50;">
+                                                   <children>
+                                                      <Label layoutX="15.0" layoutY="34.0" prefHeight="20.0" prefWidth="111.0" text="Client name : " textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lblClientId" layoutX="162.0" layoutY="15.0" prefHeight="20.0" prefWidth="70.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="15.0" layoutY="11.0" prefHeight="20.0" prefWidth="105.0" text="Client id:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lblClientName" layoutX="120.0" layoutY="37.0" prefHeight="20.0" prefWidth="105.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="262.0" layoutY="34.0" prefHeight="25.0" prefWidth="128.0" text="Phone number :" textFill="WHITE" AnchorPane.leftAnchor="262.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lblClientPhone" layoutX="392.0" layoutY="37.0" prefHeight="20.0" prefWidth="143.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="261.0" layoutY="11.0" prefHeight="25.0" prefWidth="121.0" text="Email address :" textFill="WHITE" AnchorPane.leftAnchor="261.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lblClientEmail" layoutX="392.0" layoutY="15.0" prefHeight="17.0" prefWidth="236.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="406.0" layoutY="71.0" prefHeight="20.0" prefWidth="105.0" text="Status :" textFill="WHITE" AnchorPane.leftAnchor="406.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lblClientStatus" layoutX="472.0" layoutY="74.0" prefHeight="17.0" prefWidth="236.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="15.0" layoutY="71.0" prefHeight="20.0" prefWidth="105.0" text="Address(es) :" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="TV_Addresses" layoutX="15.0" layoutY="101.0" prefHeight="100.0" prefWidth="830.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-border-color: white; -fx-border-width: 5px; -fx-background-color: #90e0ef50;">
+                                                   <children>
+                                                      <Label text="Packages : " textFill="WHITE" AnchorPane.leftAnchor="5.0">
+                                                         <font>
+                                                            <Font name="Arial Black" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ScrollPane fx:id="SP_Packages" fitToHeight="true" fitToWidth="true" layoutX="-205.0" layoutY="19.0" translateX="200.0" translateY="10.0" AnchorPane.leftAnchor="-195.0">
+                                                         <content>
+                                                            <Accordion fx:id="ACC_Packages" layoutX="7.0" layoutY="7.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                                         </content>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                          <BorderPane style="-fx-border-color: white; -fx-background-color: #90e0ef50; -fx-border-width: 5px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="219.0">
+                                             <right>
+                                                <Button fx:id="btnCreateTicket" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#createNewTicket" style="-fx-background-color: #52b788;" text="Create a New Ticket" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" onMouseClicked="#createNewTicket" pickOnBounds="true" preserveRatio="true">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                         <image>
+                                                            <Image url="@image/new_ticket.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <BorderPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <styleClass>
+                                                      <String fx:value="hover" />
+                                                      <String fx:value="pressed" />
+                                                   </styleClass>
+                                                </Button>
+                                             </right>
+                                             <left>
+                                                <Label alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Tickets : " textFill="WHITE" BorderPane.alignment="TOP_CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font name="Arial Black" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </left>
+                                             <center>
+                                                <Accordion fx:id="ACC_Tickets" pickOnBounds="false" />
+                                             </center>
+                                          </BorderPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                           <BorderPane.margin>
+                              <Insets top="15.0" />
+                           </BorderPane.margin>
+                        </TabPane>
+                     </center>
+                  </BorderPane>
+                  <AnchorPane fx:id="AP_Technician" prefHeight="621.0" prefWidth="855.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="621.0" prefWidth="855.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              
+                                          <AnchorPane prefHeight="40.0" prefWidth="855.0">
+                                       <children>
+                                          <ComboBox fx:id="cb_technicians" layoutX="194.0" layoutY="6.0" onAction="#hideTechTab" prefHeight="40.0" prefWidth="350.0" promptText="Get technician ..." style="-fx-background-color: #f0efeb; -fx-font-size: 16px;">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor></ComboBox>
+                                          <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="591.0" layoutY="3.0" mnemonicParsing="false" onAction="#initTechnicianFields" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #073b4c;" text="Search" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="hover" />
+                                          <String fx:value="pressed" />
+                                       </styleClass></Button>
+                                       </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                    </AnchorPane>
+
+                                 </top>
+                           <center>
+                          <AnchorPane fx:id="TP_Technician" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" visible="false" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <SplitPane fx:id="TP_Technician_Details" dividerPositions="0.5" orientation="VERTICAL" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="854.0" style="-fx-background-color: transparent;">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="282.0" layoutX="5.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 100; -fx-arc-width: 100;" width="449.0" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="2.0">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop color="#0f202680" />
+                                                            <Stop color="#1f384080" offset="0.5017182130584192" />
+                                                            <Stop color="#1f384080" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill></Rectangle>
+                                                <ImageView fx:id="IV_TechPicture" fitHeight="250.0" fitWidth="155.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                                                <BorderPane fx:id="BP_Maps" layoutX="388.0" layoutY="5.0" prefHeight="369.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label layoutX="290.0" layoutY="26.0" prefHeight="20.0" text="Name " textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="246.0" layoutY="95.0" prefHeight="22.0" prefWidth="144.0" text="Phone number " textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="287.0" layoutY="160.0" prefHeight="29.0" prefWidth="57.0" text="Email" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="86.0" layoutY="4.0" prefHeight="22.0" prefWidth="36.0" text="ID : " textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="288.0" layoutY="219.0" prefHeight="29.0" prefWidth="64.0" text="Status" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbl_techId" layoutX="122.0" layoutY="4.0" prefHeight="22.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbl_techName" alignment="CENTER" layoutX="198.0" layoutY="48.0" prefHeight="44.0" prefWidth="240.0" text="JeanMartin Letourneau" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Dubai Regular" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbl_techPhone" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="119.0" prefHeight="22.0" prefWidth="240.0" text="514-877-8956" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Dubai Regular" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbl_techEmail" alignment="CENTER" layoutX="195.0" layoutY="181.0" prefHeight="44.0" prefWidth="250.0" text="jeanmartinletourneau@gmail.com" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Dubai Regular" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbl_techStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="240.0" prefHeight="32.0" prefWidth="150.0" text="Available" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Dubai Regular" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane>
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="6.0" prefHeight="20.0" prefWidth="210.0" text="TODAY'S SCHEDULED TASKS" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TableView fx:id="TV_TechTasksToday" layoutY="37.0" prefHeight="363.0" prefWidth="1148.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+                                                  <columns>
+                                                    <TableColumn prefWidth="75.0" text="C1" />
+                                                    <TableColumn prefWidth="75.0" text="C2" />
+                                                  </columns>
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets top="15.0" />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="AP_Tickets" prefHeight="611.0" prefWidth="846.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="619.0" prefWidth="862.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane fx:id="AP_SearchTickets" prefHeight="563.0" prefWidth="853.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" layoutX="10.0" layoutY="5.0" orientation="VERTICAL" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                       <items>
+                                          <TableView fx:id="TV_Tickets_Search" layoutX="10.0" layoutY="5.0" prefHeight="351.0" prefWidth="832.0" />
+                                          <SplitPane dividerPositions="0.5" orientation="VERTICAL">
+                                             <items>
+                                                <Label text="Interventions for this Ticket">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TableView fx:id="TV_Intervention_By_Ticket" prefHeight="200.0" prefWidth="200.0" />
+                                             </items>
+                                          </SplitPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <AnchorPane prefHeight="56.0" prefWidth="857.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <RadioButton fx:id="rb_Complete" layoutX="20.0" layoutY="18.0" mnemonicParsing="false" text="Complete">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rb_Incomplete" layoutX="133.0" layoutY="18.0" mnemonicParsing="false" text="Incomplete">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rb_All" layoutX="255.0" layoutY="18.0" mnemonicParsing="false" text="All">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <ComboBox fx:id="cb_Months" layoutX="347.0" layoutY="16.0" prefHeight="25.0" prefWidth="202.0" promptText="Choose Month" />
+                                    <ComboBox fx:id="cb_Years" layoutX="577.0" layoutY="16.0" prefHeight="25.0" prefWidth="132.0" promptText="Choose Year" />
+                                    <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#initTicketsTable" prefWidth="150.0" text="Search" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="8.0">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  <BorderPane fx:id="AP_Live" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <HBox fx:id="hbox_display_btn_live_track_tech" alignment="CENTER" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </top>
+                     <left>
+                        <TableView fx:id="tableTechnicianLive" BorderPane.alignment="CENTER">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </left>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <ProgressIndicator fx:id="progress_loading" style="-fx-progress-color: #2a9d8f;" visible="false" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="200.0" />
+   </children>
+</AnchorPane>

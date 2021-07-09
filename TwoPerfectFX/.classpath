@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/httpclient-4.5.13.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/httpcore-4.4.13.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/json-20210307.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/jackson-core-lgpl-0.9.8.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/jackson-mapper-lgpl-0.9.8.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jars/gson-2.8.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

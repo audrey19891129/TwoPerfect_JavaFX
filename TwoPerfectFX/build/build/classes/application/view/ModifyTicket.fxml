@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane prefHeight="402.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ModifyTicketController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9dd9d2;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="34.0" layoutY="38.0" prefHeight="36.0" prefWidth="138.0" text="Client : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="74.0" prefHeight="36.0" prefWidth="138.0" text="Status : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="110.0" prefHeight="36.0" prefWidth="138.0" text="Description : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="149.0" prefHeight="36.0" prefWidth="138.0" text="Creation date : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="185.0" prefHeight="36.0" prefWidth="138.0" text="Closing date : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="221.0" prefHeight="36.0" prefWidth="181.0" text="Client available date : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dp_clientAvail" layoutX="217.0" layoutY="227.0" />
+            <Label layoutX="411.0" layoutY="221.0" prefHeight="36.0" prefWidth="54.0" text="From : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_StartTime" layoutX="465.0" layoutY="227.0" prefHeight="25.0" prefWidth="107.0" />
+            <Label layoutX="591.0" layoutY="222.0" prefHeight="36.0" prefWidth="54.0" text="To : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_EndTime" layoutX="624.0" layoutY="228.0" prefHeight="25.0" prefWidth="107.0" />
+            <DatePicker fx:id="dp_closingDate" layoutX="172.0" layoutY="191.0" />
+            <TextField fx:id="tb_CreationDate" disable="true" layoutX="172.0" layoutY="155.0" prefHeight="25.0" prefWidth="175.0" />
+            <TextField fx:id="tb_ClientName" disable="true" layoutX="172.0" layoutY="44.0" prefHeight="25.0" prefWidth="249.0" />
+            <ComboBox fx:id="cb_Description" layoutX="172.0" layoutY="116.0" prefHeight="25.0" prefWidth="250.0" />
+            <ComboBox fx:id="cb_Status" layoutX="172.0" layoutY="80.0" prefHeight="25.0" prefWidth="249.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="85.0" prefWidth="777.0" style="-fx-background-color: #80ced7; -fx-background-radius: 0 0 50 50;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_Cancel" layoutX="37.0" layoutY="21.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="169.0" text="Cancel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Save" layoutX="547.0" layoutY="21.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="195.0" text="Save modifications">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="35.0" prefWidth="611.0" style="-fx-background-color: #489fb5; -fx-background-radius: 50 50 0 0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="294.0" layoutY="5.0" prefHeight="27.0" prefWidth="66.0" text="Ticket" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_TicketNo" contentDisplay="CENTER" layoutX="360.0" layoutY="5.0" prefHeight="27.0" prefWidth="123.0" text="Ticket number" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

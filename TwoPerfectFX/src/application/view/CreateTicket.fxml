@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="bp_NewTicket" prefHeight="385.0" prefWidth="557.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.CreateTicketController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #43aa8b; -fx-background-radius: 0 0 50 50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="34.0" layoutY="2.0" prefHeight="36.0" prefWidth="138.0" text="Client : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/customer.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="34.0" layoutY="46.0" prefHeight="36.0" prefWidth="138.0" text="Status : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/status.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="34.0" layoutY="90.0" prefHeight="48.0" prefWidth="171.0" text="Description : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/description.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="34.0" layoutY="136.0" prefHeight="48.0" prefWidth="152.0" text="Address : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/address.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="34.0" layoutY="178.0" prefHeight="48.0" prefWidth="196.0" text="Creation date : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/open_date.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="34.0" layoutY="220.0" prefHeight="48.0" prefWidth="195.0" text="Closing date : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/close_date.png" />
+                     </image></ImageView>
+               </graphic>
+            </Label>
+            <DatePicker fx:id="dp_closingDate" disable="true" editable="false" layoutX="233.0" layoutY="232.0" />
+            <TextField fx:id="tb_CreationDate" disable="true" layoutX="234.0" layoutY="190.0" prefHeight="25.0" prefWidth="175.0" />
+            <TextField fx:id="tb_Status" disable="true" layoutX="172.0" layoutY="58.0" text="INCOMPLETE" />
+            <ComboBox fx:id="cb_Description" layoutX="214.0" layoutY="102.0" prefHeight="25.0" prefWidth="330.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ComboBox>
+            <Label fx:id="lbl_ClientName" layoutX="171.0" layoutY="8.0" prefHeight="36.0" prefWidth="300.0" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_Address" layoutX="214.0" layoutY="148.0" prefHeight="25.0" prefWidth="330.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="100.0" prefWidth="777.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 30 30;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_Cancel" layoutX="25.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#cancel" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #fb5607; -fx-background-radius: 10 50 10 50;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btn_Save" contentDisplay="RIGHT" layoutX="300.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#saveTicket" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #2a9d8f; -fx-background-radius: 50 10 50 10;" text="Save the ticket" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/ok.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="611.0" style="-fx-background-color: #197278; -fx-background-radius: 30 30 0 0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="141.0" layoutY="4.0" prefHeight="30.0" prefWidth="275.0" text="New Ticket" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/tickets_dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="495.0" layoutY="9.0" onMouseClicked="#cancel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/exit.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+</BorderPane>

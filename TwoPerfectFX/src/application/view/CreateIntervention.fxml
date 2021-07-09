@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="bp_NewIntervention" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="775.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.CreateInterventionController">
+   <center>
+      <AnchorPane prefHeight="300.0" prefWidth="788.0" style="-fx-background-color: #2A2B2D;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#35577895" height="78.0" layoutX="5.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="594.0" />
+            <Label layoutX="12.0" layoutY="7.0" prefHeight="36.0" prefWidth="64.0" text="Client : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_ClientName" layoutX="69.0" layoutY="12.0" prefHeight="27.0" prefWidth="521.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#35577895" height="146.0" layoutX="6.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" width="763.0" />
+            <Label layoutX="12.0" layoutY="113.0" prefHeight="36.0" prefWidth="188.0" text="Client available date : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dp_clientAvail" layoutX="200.0" layoutY="119.0" onAction="#hideSections" prefHeight="30.0" prefWidth="144.0" style="-fx-font-size: 14px;" />
+            <Label layoutX="391.0" layoutY="115.0" prefHeight="36.0" prefWidth="60.0" text="From : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_StartTime" layoutX="452.0" layoutY="114.0" onAction="#hideSections" prefHeight="39.0" prefWidth="115.0" promptText="START TIME" style="-fx-font-size: 16px;" />
+            <Label layoutX="593.0" layoutY="114.0" prefHeight="36.0" prefWidth="38.0" text="To : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_EndTime" layoutX="629.0" layoutY="112.0" onAction="#hideSections" prefHeight="42.0" prefWidth="107.0" promptText="END TIME" style="-fx-font-size: 16px;" />
+            <Button fx:id="BTN_SearchTech" layoutX="30.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#searchAvailableEmployees" prefHeight="44.0" prefWidth="720.0" style="-fx-background-color: #00b4d850;" text="Search Technician" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/tech_dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <AnchorPane fx:id="AP_SelectTech" layoutX="36.0" layoutY="235.0" prefHeight="190.0" prefWidth="733.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#35577895" height="180.0" stroke="BLACK" strokeType="INSIDE" width="733.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ComboBox fx:id="cb_Technician" layoutX="248.0" layoutY="16.0" prefHeight="38.0" prefWidth="463.0" promptText="Select available technician" style="-fx-font-size: 16px;" />
+                  <Label layoutX="10.0" layoutY="18.0" prefHeight="36.0" prefWidth="240.0" text="Select available Technician :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="67.0" prefHeight="36.0" prefWidth="75.0" text="Note : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="TA_Note" layoutX="79.0" layoutY="63.0" prefHeight="55.0" prefWidth="640.0" promptText="Add a note for technician.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="14.0" layoutY="130.0" prefHeight="36.0" prefWidth="227.0" text="Communication Method :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cb_Communication" layoutX="237.0" layoutY="126.0" prefHeight="37.0" prefWidth="206.0" promptText="Choose option" style="-fx-font-size: 16px;" visibleRowCount="3" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="13.0" layoutY="37.0" prefHeight="36.0" prefWidth="102.0" text="Description : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_Description" layoutX="112.0" layoutY="35.0" prefHeight="36.0" prefWidth="480.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="41.0" prefWidth="775.0" style="-fx-background-color: #404349; -fx-background-radius: 30 30 0 0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_Interventon" alignment="CENTER" layoutX="265.0" layoutY="7.0" prefHeight="32.0" prefWidth="200.0" text="Assign Ticket No :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/intervention.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="693.0" layoutY="5.0" onMouseClicked="#cancel" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0">
+               <image>
+                  <Image url="@image/exit.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lbl_num_ticket" layoutX="465.0" layoutY="10.0" text="###" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="71.0" prefWidth="776.0" style="-fx-background-color: #2A2B2D; -fx-background-radius: 0 0 30 30;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_Cancel" layoutX="33.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#cancel" prefHeight="46.0" prefWidth="325.0" style="-fx-background-color: #e56b6f; -fx-background-radius: 50 0 0 50;" text="CANCEL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_Assign" layoutX="420.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#createIntervention" prefHeight="46.0" prefWidth="325.0" style="-fx-background-color: #90be6d; -fx-background-radius: 0 50 50 0;" text="ASSIGN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/ok.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="hover" />
+                  <String fx:value="pressed" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
